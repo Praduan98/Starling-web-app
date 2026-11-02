@@ -1,0 +1,101 @@
+/* Starling demo film: the dark UI kit the scenes are built from. Values are Starling's dark-theme tokens
+   (assets/css/tokens.css), set at film scale (about 1.6× the app) so interface text stays legible at 1080p. */
+
+#stage { letter-spacing: -0.01em; }
+#stage svg { display: block; }
+
+/* surfaces */
+.card {
+  position: absolute; box-sizing: border-box; overflow: hidden; color: #F8F8F8;
+  background: linear-gradient(180deg, #15161A 0%, #0F1013 100%);
+  border: 1.5px solid #24262B; border-radius: 26px;
+  box-shadow: 0 70px 120px -40px rgba(0, 0, 0, .92), 0 24px 48px -24px rgba(0, 0, 0, .7), inset 0 1px 0 rgba(255, 255, 255, .06);
+}
+.card.lift { box-shadow: 0 80px 140px -30px rgba(0, 0, 0, .95), 0 0 0 1px rgba(0, 0, 0, .5), inset 0 1px 0 rgba(255, 255, 255, .08); }
+.well { background: #08090B; border: 1.5px solid #33363D; border-radius: 18px; box-sizing: border-box; }
+.hair { border-color: #24262B; }
+.sheen { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(105deg, transparent 38%, rgba(255, 255, 255, .055) 48%, rgba(255, 255, 255, .0) 58%); }
+
+/* layout */
+.abs0 { position: absolute; left: 0; top: 0; }
+.fill { position: absolute; inset: 0; }
+.row { display: flex; align-items: center; }
+.col { display: flex; flex-direction: column; }
+.grow { flex: 1; min-width: 0; }
+.nowrap { white-space: nowrap; }
+
+/* ink */
+.f1 { color: #F8F8F8; } .f2 { color: #BEC3CC; } .f3 { color: #959AA3; } .fb { color: #FF7A8F; }
+.fok { color: #3DD49A; } .fwarn { color: #FDBA4D; } .finfo { color: #5AB4FF; } .fbad { color: #FF6B7A; }
+.w4 { font-weight: 400; } .w5 { font-weight: 500; } .w6 { font-weight: 600; } .w7 { font-weight: 700; }
+
+/* controls */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 12px; box-sizing: border-box; white-space: nowrap;
+  height: 60px; padding: 0 28px; border-radius: 999px; font-size: 24px; font-weight: 600; color: #F8F8F8;
+  background: #17181C; border: 1.5px solid #33363D; }
+.btn.cta { color: #FFFFFF; border: 0; font-weight: 700;
+  /* the brand's CTA gradient, held on crimson under the label so white text keeps AA; it warms only at the trailing edge */
+  background: linear-gradient(100deg, #E11D48 0%, #E11D48 58%, #EC2F45 78%, #F0560F 100%);
+  box-shadow: 0 16px 36px -12px rgba(249, 60, 89, .6), inset 0 1px 0 rgba(255, 255, 255, .22); }
+.btn.soft { background: rgba(249, 60, 89, .12); border: 1.5px solid rgba(249, 60, 89, .32); color: #FF7A8F; }
+.btn.sq { width: 60px; padding: 0; border-radius: 16px; color: #BEC3CC; }
+.chip { display: inline-flex; align-items: center; gap: 12px; height: 58px; padding: 0 22px 0 12px; border-radius: 999px; box-sizing: border-box;
+  border: 1.5px solid #33363D; background: #17181C; font-size: 24px; font-weight: 600; color: #F8F8F8; white-space: nowrap; position: relative; }
+.chip .tick { width: 30px; height: 30px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: #FFFFFF;
+  background: linear-gradient(135deg, #FF2357, #FE6E00); }
+.chip .ring { position: absolute; inset: -1.5px; border-radius: 999px; border: 2px solid #F93C59; box-shadow: 0 0 0 4px rgba(249, 60, 89, .16); }
+.badge { display: inline-flex; align-items: center; gap: 8px; height: 42px; padding: 0 16px 0 12px; border-radius: 999px; font-size: 22px; font-weight: 600; white-space: nowrap; box-sizing: border-box; }
+.badge.ok { background: rgba(0, 187, 127, .14); color: #3DD49A; }
+.badge.warn { background: rgba(249, 156, 0, .14); color: #FDBA4D; }
+.badge.info { background: rgba(0, 132, 204, .16); color: #5AB4FF; }
+.badge.bad { background: rgba(212, 9, 36, .18); color: #FF6B7A; }
+.badge.brand { background: rgba(249, 60, 89, .14); color: #FF7A8F; }
+.badge.mute { background: #1F2126; color: #BEC3CC; }
+.count { display: inline-flex; align-items: center; justify-content: center; min-width: 52px; height: 52px; padding: 0 12px; box-sizing: border-box;
+  border-radius: 999px; background: #E11D48; color: #FFFFFF; font-size: 28px; font-weight: 700; box-shadow: 0 0 0 4px #050506; }
+.input { display: flex; align-items: center; height: 78px; padding: 0 24px; font-size: 28px; color: #F8F8F8; }
+.input.focus { border-color: #F93C59; box-shadow: 0 0 0 5px rgba(249, 60, 89, .2); }
+.caret { display: inline-block; width: 2.5px; height: 34px; margin-left: 2px; background: #F93C59; }
+.lbl { font-size: 22px; font-weight: 600; color: #BEC3CC; }
+
+/* identity */
+.av { display: block; border-radius: 50%; object-fit: cover; flex: none; }
+.avw { position: relative; flex: none; }
+.avw .nb { position: absolute; right: -4px; bottom: -4px; box-shadow: 0 0 0 3px #0F1013; }
+.nb { display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; color: #FFFFFF; flex: none; }
+.nb.sq { border-radius: 28%; }
+.nb-instagram { background: radial-gradient(circle at 30% 107%, #FDF497 0%, #FDF497 5%, #FD5949 45%, #D6249F 60%, #285AEB 90%); }
+.nb-facebook { background: #0866FF; } .nb-linkedin { background: #0A66C2; } .nb-youtube { background: #FF0000; }
+.nb-x, .nb-tiktok, .nb-threads { background: #FFFFFF; color: #000000; }
+.nx { display: inline-flex; align-items: center; justify-content: center; flex: none; border-radius: 14px; background: #E11D48; color: #FFFFFF; font-weight: 700; }
+.ico { display: inline-flex; align-items: center; justify-content: center; flex: none; }
+.tile-ic { display: inline-flex; align-items: center; justify-content: center; flex: none; width: 52px; height: 52px; border-radius: 16px; color: #FFFFFF;
+  background: linear-gradient(135deg, #FF2357, #FE6E00); }
+.thumb { display: block; object-fit: cover; flex: none; }
+
+/* scene furniture */
+.alert { position: absolute; display: flex; align-items: center; gap: 16px; height: 70px; padding: 0 28px 0 14px; border-radius: 22px; box-sizing: border-box;
+  background: rgba(23, 24, 28, .94); border: 1.5px solid #33363D; font-size: 28px; font-weight: 500; color: #F8F8F8; white-space: nowrap;
+  box-shadow: 0 24px 48px -16px rgba(0, 0, 0, .85); }
+.alert .ib { width: 44px; height: 44px; border-radius: 13px; display: inline-flex; align-items: center; justify-content: center; background: #1F2126; flex: none; }
+.ntile { position: absolute; display: flex; align-items: center; justify-content: center; border-radius: 30%; box-shadow: 0 30px 60px -20px rgba(0, 0, 0, .9); }
+.gridbg { position: absolute; inset: -200px; background-image: linear-gradient(rgba(255, 255, 255, .045) 1.5px, transparent 1.5px), linear-gradient(90deg, rgba(255, 255, 255, .045) 1.5px, transparent 1.5px);
+  background-size: 96px 96px; -webkit-mask-image: radial-gradient(ellipse 60% 55% at 50% 45%, #000 15%, transparent 78%); mask-image: radial-gradient(ellipse 60% 55% at 50% 45%, #000 15%, transparent 78%); }
+.point { position: absolute; width: 220px; height: 220px; left: 850px; top: 430px; border-radius: 50%;
+  background: radial-gradient(closest-side, #FFFFFF 0%, rgba(255, 122, 143, .9) 14%, rgba(249, 60, 89, .35) 42%, rgba(249, 60, 89, 0) 100%); }
+.logo-wrap { position: absolute; }
+.logo-wrap img { position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: block; }
+.sel { position: absolute; inset: 0; background: rgba(249, 60, 89, .08); }
+.selbar { position: absolute; left: 0; top: 14px; bottom: 14px; width: 5px; border-radius: 0 6px 6px 0; background: linear-gradient(180deg, #FF2357, #FE6E00); }
+.bubble { border-radius: 24px; padding: 20px 26px; font-size: 26px; line-height: 1.42; box-sizing: border-box; }
+.bubble.in { background: #17181C; border: 1.5px solid #24262B; color: #F8F8F8; border-bottom-left-radius: 8px; }
+.bubble.out { background: rgba(249, 60, 89, .14); border: 1.5px solid rgba(249, 60, 89, .34); color: #F8F8F8; border-bottom-right-radius: 8px; }
+.aibox { position: absolute; border-radius: 22px; box-sizing: border-box; background: linear-gradient(180deg, rgba(249, 60, 89, .09), rgba(254, 110, 0, .04));
+  border: 1.5px solid rgba(249, 60, 89, .38); }
+.shimmer { position: absolute; top: 0; bottom: 0; width: 46%; pointer-events: none;
+  background: linear-gradient(100deg, rgba(255, 35, 87, 0) 0%, rgba(255, 35, 87, .16) 40%, rgba(254, 110, 0, .22) 52%, rgba(254, 110, 0, 0) 100%); }
+.spin { width: 30px; height: 30px; border-radius: 50%; border: 3.5px solid rgba(255, 255, 255, .35); border-top-color: #FFFFFF; box-sizing: border-box; }
+.dot { display: inline-block; border-radius: 50%; flex: none; }
+.gauge-num { font-size: 72px; font-weight: 700; letter-spacing: -0.03em; }
+.kpi-v { font-size: 56px; font-weight: 700; letter-spacing: -0.03em; line-height: 1; }
+.tnum { font-variant-numeric: tabular-nums; }

@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Set up your workspace · Starling</title>
+  <meta name="theme-color" content="#E11D48">
+  <script>try{var t=localStorage.getItem('starling:theme');t=t?JSON.parse(t):(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/marketing.css">
+</head>
+<body data-page="onboarding">
+  <a class="skip-link" href="#ob-main">Skip to setup</a>
+  <div class="ob">
+    <div class="glow glow-rose" aria-hidden="true"></div>
+    <div class="glow glow-orange" aria-hidden="true"></div>
+
+    <header class="ob-top">
+      <span class="mk-brand">
+        <img class="logo-l" src="assets/brand/logo.svg" alt="Starling" height="26" width="128"><img class="logo-d" src="assets/brand/logo-white.svg" alt="Starling" height="26" width="128">
+      </span>
+      <a class="btn btn-ghost btn-sm ob-skip" href="app.html#/home">Skip setup</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch theme"><span class="theme-ic"></span></button>
+    </header>
+
+    <nav aria-label="Setup progress">
+      <ol class="steps">
+        <li class="step"><span class="n">1</span><span class="step-label">Workspace</span></li>
+        <li class="step-line" aria-hidden="true"></li>
+        <li class="step"><span class="n">2</span><span class="step-label">Channels</span></li>
+        <li class="step-line" aria-hidden="true"></li>
+        <li class="step"><span class="n">3</span><span class="step-label">Goals</span></li>
+        <li class="step-line" aria-hidden="true"></li>
+        <li class="step"><span class="n">4</span><span class="step-label">Team</span></li>
+      </ol>
+    </nav>
+
+    <main class="ob-main" id="ob-main">
+      <div class="card ob-card">
+
+        <!-- Step 1 -->
+        <section class="ob-panel" data-step="1" id="ob-panel-1" aria-labelledby="ob-h1">
+          <span class="mk-eyebrow"><i data-icon="building-2" data-size="16"></i> Workspace</span>
+          <h1 id="ob-h1" tabindex="-1" style="margin-top:10px">Tell us about your brand</h1>
+          <p class="sub">This sets up your workspace, brand voice and default publishing settings.</p>
+          <div class="ob-fields">
+            <div class="field">
+              <label class="label" for="ob-ws">Brand or workspace name<span class="req" aria-hidden="true">*</span></label>
+              <input class="input input-lg" id="ob-ws" data-name="Workspace name" required autocomplete="organization">
+              <div class="hint">Teammates will see this name when they join.</div>
+            </div>
+            <div class="ob-grid-2">
+              <div class="field">
+                <label class="label" for="ob-industry">Industry</label>
+                <select class="select input-lg" id="ob-industry">
+                  <option>Technology &amp; SaaS</option>
+                  <option>Financial services</option>
+                  <option>Healthcare &amp; life sciences</option>
+                  <option>Retail &amp; e-commerce</option>
+                  <option>Professional services</option>
+                  <option>Agency</option>
+                  <option>Non-profit</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="field">
+                <label class="label" for="ob-tz">Time zone</label>
+                <select class="select input-lg" id="ob-tz">
+                  <option>India Standard Time (IST)</option>
+                  <option>Gulf Standard Time (GST)</option>
+                  <option>London (GMT)</option>
+                  <option>Pacific Time (US &amp; Canada)</option>
+                  <option>India Standard Time</option>
+                  <option>Singapore</option>
+                </select>
+              </div>
+            </div>
+            <fieldset class="field">
+              <legend class="label" style="margin-bottom:6px">How many people manage social?</legend>
+              <div class="segmented" id="ob-team" role="group" aria-label="Team size">
+                <button type="button" data-v="1">Just me</button>
+                <button type="button" data-v="2-5">2 to 5</button>
+                <button type="button" data-v="6-25">6 to 25</button>
+                <button type="button" data-v="26+">26+</button>
+              </div>
+            </fieldset>
+          </div>
+        </section>
+
+        <!-- Step 2 -->
+        <section class="ob-panel" data-step="2" aria-labelledby="ob-h2" hidden>
+          <span class="mk-eyebrow"><i data-icon="link" data-size="16"></i> Channels</span>
+          <h1 id="ob-h2" tabindex="-1" style="margin-top:10px">Connect your channels</h1>
+          <p class="sub">Starling publishes, replies and pulls analytics through each network's official API. You can add more later.</p>
+          <div class="net-grid" id="ob-nets"></div>
+          <p class="hint" style="margin-top:16px"><i data-icon="shield-check" data-size="14"></i> We never post without your approval, and you can disconnect anytime.</p>
+        </section>
+
+        <!-- Step 3 -->
+        <section class="ob-panel" data-step="3" aria-labelledby="ob-h3" hidden>
+          <span class="mk-eyebrow"><i data-icon="target" data-size="16"></i> Goals</span>
+          <h1 id="ob-h3" tabindex="-1" style="margin-top:10px">What do you want to achieve?</h1>
+          <p class="sub">Pick as many as you like. We will tailor your dashboard, reports and AI suggestions.</p>
+          <div class="goal-grid" id="ob-goals" role="group" aria-label="Goals"></div>
+        </section>
+
+        <!-- Step 4 -->
+        <section class="ob-panel" data-step="4" aria-labelledby="ob-h4" hidden>
+          <span class="mk-eyebrow"><i data-icon="users" data-size="16"></i> Team</span>
+          <h1 id="ob-h4" tabindex="-1" style="margin-top:10px">Invite your team</h1>
+          <p class="sub">Social is a team sport. Add teammates now or skip and invite them later.</p>
+          <div class="ob-fields">
+            <div class="field">
+              <label class="label" for="ob-invite">Email addresses</label>
+              <div class="invite-box" id="ob-invite-box">
+                <input id="ob-invite" type="email" inputmode="email" autocomplete="off" placeholder="Type an email and press Enter" aria-describedby="ob-invite-hint">
+              </div>
+              <div class="row between">
+                <div class="hint" id="ob-invite-hint">Separate addresses with Enter or a comma. <span id="ob-invite-count"></span></div>
+                <button class="btn btn-ghost btn-sm" type="button" id="ob-invite-add"><i data-icon="plus" data-size="16"></i> Add</button>
+              </div>
+            </div>
+            <div class="field">
+              <label class="label" for="ob-role">Role for new teammates</label>
+              <select class="select input-lg" id="ob-role">
+                <option>Admin</option>
+                <option>Editor</option>
+                <option>Contributor</option>
+                <option>Viewer</option>
+              </select>
+              <div class="hint" id="ob-role-hint" aria-live="polite"></div>
+            </div>
+            <div>
+              <div class="label">Already in this workspace</div>
+              <div class="team-list">
+                <div class="team-row"><span class="avatar avatar-md"><img src="assets/media/a4.webp" alt=""></span><div class="grow"><b>Arjun Mehta</b><span>arjun@nexora.io · Head of Social</span></div><span class="badge badge-brand">Owner</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Done -->
+        <section class="ob-panel ob-done" data-step="5" aria-labelledby="ob-h5" hidden>
+          <div class="burst"><img src="assets/brand/logo-mark.svg" alt="" style="filter:brightness(0) invert(1)"></div>
+          <h1 id="ob-h5" tabindex="-1">You’re all set</h1>
+          <p class="sub"><b id="ob-done-ws" class="text-2"></b> is ready. Your first week of best posting times is already mapped.</p>
+          <ul class="ob-summary" id="ob-summary"></ul>
+          <div class="hero-ctas" style="margin-top:32px">
+            <a class="btn btn-gradient btn-pill btn-xl" href="app.html#/home">Open Starling <i data-icon="arrow-right" data-size="18"></i></a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <div class="ob-bar">
+      <div class="ob-bar-inner">
+        <button class="btn btn-secondary btn-pill btn-lg" type="button" id="ob-back"><i data-icon="arrow-left" data-size="18"></i> Back</button>
+        <span class="meta" id="ob-meta" aria-live="polite">Step 1 of 4</span>
+        <div class="progress" aria-hidden="true"><span id="ob-progress" style="width:25%"></span></div>
+        <button class="btn btn-gradient btn-pill btn-lg ml-auto" type="button" id="ob-next">Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/marketing.js"></script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+{
+  "name": "Starling",
+  "status": "reviewed",
+  "source": [
+    "assets/brand",
+    "assets/css/tokens.css (light and dark roles)",
+    "brand.html (brand guidelines)"
+  ],
+  "colors": {
+    "rose-50": "#fff1f2",
+    "rose-100": "#ffe4e6",
+    "rose-200": "#ffccd3",
+    "rose-300": "#ffa2ae",
+    "rose-400": "#ff667f",
+    "rose-500": "#ff2357",
+    "rose-600": "#e11d48",
+    "rose-700": "#c20039",
+    "rose-900": "#8b0836",
+    "orange-50": "#fff7ed",
+    "orange-100": "#ffedd5",
+    "orange-500": "#fe6e00",
+    "orange-600": "#f05100",
+    "slate-50": "#f8fafc",
+    "slate-100": "#f1f5f9",
+    "slate-200": "#e2e8f0",
+    "slate-300": "#cad5e2",
+    "slate-400": "#90a1b9",
+    "slate-500": "#62748e",
+    "slate-600": "#45556c",
+    "slate-700": "#314158",
+    "slate-800": "#1d293d",
+    "slate-900": "#0f172b",
+    "slate-950": "#020618",
+    "emerald-50": "#ecfdf5",
+    "emerald-600": "#00a544",
+    "emerald-700": "#007956",
+    "amber-50": "#fffbeb",
+    "amber-500": "#f99c00",
+    "amber-700": "#b75000",
+    "sky-50": "#f0f9ff",
+    "sky-600": "#0084cc",
+    "violet-50": "#f5f3ff",
+    "violet-600": "#7f22fe",
+    "bg": "#fcfcfc",
+    "bg-app": "#f6f7f9",
+    "surface": "#ffffff",
+    "surface-2": "#f0f2f5",
+    "surface-3": "#e9ecf1",
+    "surface-hover": "#f5f6f8",
+    "surface-inverse": "#0f172b",
+    "fg": "#0f172b",
+    "fg-2": "#45556c",
+    "fg-3": "#62748e",
+    "fg-on-brand": "#ffffff",
+    "fg-inverse": "#f8f8f8",
+    "border": "#e4e4e4",
+    "border-strong": "#d4d7dd",
+    "divider": "#eeeff2",
+    "brand": "#e11d48",
+    "brand-hover": "#c81b41",
+    "brand-active": "#b0163a",
+    "brand-ink": "#be123c",
+    "brand-soft": "#fff1f2",
+    "brand-soft-2": "#ffe4e6",
+    "success": "#007956",
+    "success-soft": "#ecfdf5",
+    "warning": "#b75000",
+    "warning-soft": "#fffbeb",
+    "danger": "#d40924",
+    "danger-soft": "#fef2f2",
+    "info": "#0068b8",
+    "info-soft": "#f0f9ff",
+    "series-1": "#e11d48",
+    "series-2": "#2a78d6",
+    "series-3": "#1baf7a",
+    "series-4": "#eda100",
+    "series-5": "#6250d6",
+    "seq-0": "#fff1f2",
+    "seq-1": "#ffccd3",
+    "seq-2": "#ffa2ae",
+    "seq-3": "#ff667f",
+    "seq-4": "#e11d48",
+    "seq-5": "#a10e35",
+    "chart-grid": "#eef0f3",
+    "chart-axis": "#62748e",
+    "chart-bar": "#7c8ba1",
+    "net-ink": "#000000",
+    "net-ink-fg": "#ffffff",
+    "dark-bg": "#050506",
+    "dark-bg-app": "#08090b",
+    "dark-surface": "#0f1013",
+    "dark-surface-2": "#17181c",
+    "dark-surface-3": "#1f2126",
+    "dark-fg": "#f8f8f8",
+    "dark-fg-2": "#bec3cc",
+    "dark-fg-3": "#959aa3",
+    "dark-border": "#24262b",
+    "dark-border-strong": "#33363d",
+    "dark-brand": "#f93c59",
+    "dark-brand-ink": "#ff7a8f",
+    "grad-text-dark-from": "#ff4d73",
+    "grad-text-dark-to": "#ff8a2b",
+    "dark-success": "#3dd49a",
+    "dark-warning": "#fdba4d",
+    "dark-danger": "#ff6b7a",
+    "dark-info": "#5ab4ff",
+    "dark-series-2": "#3987e5",
+    "dark-series-3": "#199e70",
+    "dark-series-4": "#c98500",
+    "dark-series-5": "#9085e9"
+  },
+  "roles": {
+    "primary": "brand",
+    "secondary": "orange-500",
+    "accent": "rose-500",
+    "background_dark": "dark-bg",
+    "background_light": "bg",
+    "text": "fg",
+    "text_on_dark": "dark-fg",
+    "muted": "dark-fg-3"
+  },
+  "restricted": [
+    {
+      "color": "dark-success",
+      "allowed_for": [
+        "badge",
+        "ui"
+      ],
+      "note": "status: good / published; always with an icon and a label"
+    },
+    {
+      "color": "dark-warning",
+      "allowed_for": [
+        "badge",
+        "ui"
+      ],
+      "note": "status: needs approval"
+    },
+    {
+      "color": "dark-danger",
+      "allowed_for": [
+        "badge",
+        "ui"
+      ],
+      "note": "status: failed; destructive"
+    },
+    {
+      "color": "dark-info",
+      "allowed_for": [
+        "badge",
+        "ui"
+      ],
+      "note": "status: scheduled"
+    },
+    {
+      "color": "success",
+      "allowed_for": [
+        "badge",
+        "ui"
+      ]
+    },
+    {
+      "color": "warning",
+      "allowed_for": [
+        "badge",
+        "ui"
+      ]
+    },
+    {
+      "color": "danger",
+      "allowed_for": [
+        "badge",
+        "ui"
+      ]
+    },
+    {
+      "color": "info",
+      "allowed_for": [
+        "badge",
+        "ui"
+      ]
+    }
+  ],
+  "fonts": [
+    {
+      "family": "DM Sans",
+      "role": "display",
+      "weights": [
+        400,
+        500,
+        600,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "files": [
+        "fonts/DMSans-Variable.ttf"
+      ],
+      "use": "One family, four weights: Regular 400 body, Medium 500 labels, Semibold 600 UI, Bold 700 headings. Display sizes tighten tracking (-0.035em) and line height (1.04)."
+    }
+  ],
+  "logo": {
+    "placement": "free",
+    "once_per_frame": true,
+    "plate": null,
+    "min_height_px": 24,
+    "do_not": [
+      "recolor or shift the rose-to-orange gradient",
+      "stretch or squash",
+      "add effects: no shadows, glows, outlines or rotation",
+      "place on busy photos (use the white lockup on a calm, darkened area)",
+      "crowd it: keep clear space x = the star height (about a quarter of the lockup height)",
+      "use on brand colour (the gradient mark disappears on crimson)",
+      "set the lockup below 96 px wide or the mark below 16 px"
+    ],
+    "files": {
+      "lockup": "../../../assets/brand/logo.svg",
+      "lockup_white": "../../../assets/brand/logo-white.svg",
+      "mono": "../../../assets/brand/logo-mono.svg",
+      "mark": "../../../assets/brand/logo-mark.svg",
+      "icon": "../../../assets/brand/app-icon.svg"
+    }
+  },
+  "motifs": [
+    "murmuration: thousands of birds moving as one fluid shape (the brand story)",
+    "the flight path: a calligraphic S stroke, hair-thin where it begins, gathering weight, tapering to a point",
+    "the four-point star (floats ahead of the stroke; the AI moment)",
+    "signature rose-to-orange gradient (#FF2357 to #FE6E00) for display words, the logo, active indicators and progress fills",
+    "hairline-bordered cards, 16 px radius, soft elevation; pill buttons and badges",
+    "soft rose and orange glows on ink over a faint grid (the sign-in hero)"
+  ],
+  "voice": "Calm, clear, quietly confident. Plain verbs and specific numbers, no jargon; human (contractions, \"you\"); celebrate the team, not the tool.",
+  "guidelines": [
+    "../../../brand.html"
+  ],
+  "rules": [
+    "Crimson leads; slate neutrals do most of the work; the gradient is for brand moments only.",
+    "Never put small text on the signature gradient; buttons with text use the CTA gradient (#E11D48 to #F0560F), one primary action per screen.",
+    "Status always pairs an icon with a label, never colour alone; status colours are never used for a series.",
+    "Icons are Lucide at a 1.75 stroke; network glyphs are the official marks on their own brand colour; never emoji as icons.",
+    "Charts: one axis, thin marks, legend for two or more series, text in ink not series colour.",
+    "Motion: entrances ease out, exits ease in and run about 30% faster; spring easing only for small confirmations.",
+    "Dark mode uses its own stepped values (tokens.css dark roles), not an inversion."
+  ],
+  "text_colors": [
+    "dark-fg",
+    "dark-fg-2",
+    "dark-fg-3",
+    "#ffffff",
+    "dark-brand",
+    "dark-brand-ink",
+    "grad-text-dark-from",
+    "grad-text-dark-to",
+    "brand",
+    "rose-500",
+    "orange-500",
+    "fg",
+    "fg-2",
+    "fg-3",
+    "brand-ink",
+    "dark-success",
+    "dark-warning",
+    "dark-danger",
+    "dark-info",
+    "success",
+    "warning",
+    "danger",
+    "info"
+  ],
+  "balance": {
+    "neutral": 0.8,
+    "hero": 0.15,
+    "accent": 0.05
+  }
+}

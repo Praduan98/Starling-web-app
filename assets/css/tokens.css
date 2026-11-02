@@ -1,0 +1,292 @@
+/* ==========================================================================
+   Starling Design Tokens
+   Derived from the AllAI Suite design language (allaisuite.com):
+   DM Sans · crimson brand (#E11D48) · rose→orange signature gradient ·
+   slate ink · hairline neutral borders · 8px base radius · soft elevation.
+   Three layers: primitives → semantic roles → component aliases.
+   ========================================================================== */
+
+:root {
+  /* ---------- Primitives: brand ---------- */
+  --rose-50: #FFF1F2;
+  --rose-100: #FFE4E6;
+  --rose-200: #FFCCD3;
+  --rose-300: #FFA2AE;
+  --rose-400: #FF667F;
+  --rose-500: #FF2357;   /* AllAI rose-500 */
+  --rose-600: #E11D48;   /* AllAI --brand / --primary */
+  --rose-700: #C20039;
+  --rose-900: #8B0836;
+  --orange-50: #FFF7ED;
+  --orange-100: #FFEDD5;
+  --orange-500: #FE6E00; /* AllAI orange-500 */
+  --orange-600: #F05100;
+
+  /* ---------- Primitives: neutrals (AllAI slate) ---------- */
+  --slate-50: #F8FAFC;
+  --slate-100: #F1F5F9;
+  --slate-200: #E2E8F0;
+  --slate-300: #CAD5E2;
+  --slate-400: #90A1B9;
+  --slate-500: #62748E;
+  --slate-600: #45556C;
+  --slate-700: #314158;
+  --slate-800: #1D293D;
+  --slate-900: #0F172B;
+  --slate-950: #020618;
+
+  /* ---------- Primitives: support hues ---------- */
+  --emerald-50: #ECFDF5;
+  --emerald-600: #00A544;
+  --emerald-700: #007956;
+  --amber-50: #FFFBEB;
+  --amber-500: #F99C00;
+  --amber-700: #B75000;
+  --sky-50: #F0F9FF;
+  --sky-600: #0084CC;
+  --violet-50: #F5F3FF;
+  --violet-600: #7F22FE;
+
+  /* ---------- Typography ---------- */
+  --font-sans: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
+  --fs-2xs: 11px;
+  --fs-xs: 12px;
+  --fs-sm: 13px;
+  --fs-base: 14px;
+  --fs-md: 15px;   /* AllAI nav/body: text-[15px] */
+  --fs-lg: 16px;
+  --fs-xl: 18px;
+  --fs-2xl: 20px;
+  --fs-3xl: 24px;
+  --fs-4xl: 30px;
+  --fs-5xl: 36px;
+  --fs-6xl: 48px;
+  --fs-7xl: 60px;
+  --fs-8xl: 72px;
+  --lh-tight: 1.15;
+  --lh-snug: 1.35;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.625;
+  --tracking-tight: -0.025em;
+  --tracking-display: -0.035em;
+  --tracking-wide: 0.05em;
+
+  /* ---------- Spacing (4pt) ---------- */
+  --sp-0: 0;
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+  --sp-16: 64px;
+  --sp-20: 80px;
+  --sp-24: 96px;
+
+  /* ---------- Radius (AllAI --radius: .5rem) ---------- */
+  --r-xs: 4px;
+  --r-sm: 6px;
+  --r-md: 8px;
+  --r-lg: 12px;
+  --r-xl: 16px;   /* rounded-2xl cards */
+  --r-2xl: 24px;  /* rounded-3xl sheets */
+  --r-full: 999px;
+
+  /* ---------- Motion ---------- */
+  --dur-fast: 120ms;
+  --dur: 180ms;
+  --dur-slow: 280ms;
+  --ease: cubic-bezier(.4, 0, .2, 1);
+  --ease-out: cubic-bezier(0, 0, .2, 1);
+  --ease-in: cubic-bezier(.4, 0, 1, 1);
+  --ease-spring: cubic-bezier(.34, 1.36, .64, 1);
+
+  /* ---------- Z-index scale ---------- */
+  --z-base: 0;
+  --z-sticky: 10;
+  --z-sidebar: 20;
+  --z-dropdown: 40;
+  --z-overlay: 100;
+  --z-modal: 110;
+  --z-toast: 1000;
+
+  /* ---------- Layout ---------- */
+  --sidebar-w: 248px;
+  --sidebar-w-collapsed: 72px;
+  --topbar-h: 64px;
+  --content-max: 1440px;
+}
+
+/* ==========================================================================
+   Semantic roles — LIGHT (default)
+   ========================================================================== */
+:root,
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  /* Surfaces */
+  --bg: #FCFCFC;              /* AllAI --background */
+  --bg-app: #F6F7F9;          /* app canvas: a step below cards */
+  --surface: #FFFFFF;         /* AllAI --card */
+  --surface-2: #F0F2F5;       /* AllAI --muted */
+  --surface-3: #E9ECF1;
+  --surface-hover: #F5F6F8;
+  --surface-inverse: #0F172B;
+  --overlay: rgba(2, 6, 24, .52);
+
+  /* Ink */
+  --fg: #0F172B;              /* slate-900 headings */
+  --fg-2: #45556C;            /* slate-600 body */
+  --fg-3: #62748E;            /* slate-500 meta — 4.76:1 on white */
+  --fg-on-brand: #FFFFFF;
+  --fg-inverse: #F8F8F8;
+
+  /* Lines */
+  --border: #E4E4E4;          /* AllAI --border */
+  --border-strong: #D4D7DD;
+  --divider: #EEEFF2;
+
+  /* Brand */
+  --brand: #E11D48;           /* 4.70:1 with white */
+  --brand-hover: #C81B41;
+  --brand-active: #B0163A;
+  --brand-ink: #BE123C;       /* brand-coloured text on light surfaces */
+  --brand-soft: #FFF1F2;      /* rose-50 tint */
+  --brand-soft-2: #FFE4E6;    /* rose-100 */
+  --brand-ring: rgba(225, 29, 72, .28);
+  --grad-brand: linear-gradient(90deg, #FF2357 0%, #FE6E00 100%);              /* AllAI from-rose-500 to-orange-500 */
+  --grad-brand-cta: linear-gradient(100deg, #E11D48 0%, #EC2F45 45%, #F0560F 100%); /* AA-tuned for button text */
+  --grad-brand-soft: linear-gradient(135deg, #FFF1F2 0%, #FFF7ED 100%);
+  --grad-text: linear-gradient(90deg, #E11D48 0%, #FE6E00 100%);
+
+  /* Status — always paired with icon + label */
+  --success: #007956;
+  --success-soft: #ECFDF5;
+  --warning: #B75000;
+  --warning-soft: #FFFBEB;
+  --danger: #D40924;          /* AllAI --destructive */
+  --danger-soft: #FEF2F2;
+  --info: #0068B8;
+  --info-soft: #F0F9FF;
+
+  /* Data viz — validated categorical order (dataviz validator: ALL PASS light) */
+  --series-1: #E11D48;  /* crimson (brand) */
+  --series-2: #2A78D6;  /* blue */
+  --series-3: #1BAF7A;  /* aqua */
+  --series-4: #EDA100;  /* amber */
+  --series-5: #6250D6;  /* violet */
+  --seq-0: #FFF1F2;
+  --seq-1: #FFCCD3;
+  --seq-2: #FFA2AE;
+  --seq-3: #FF667F;
+  --seq-4: #E11D48;
+  --seq-5: #A10E35;
+  --chart-grid: #EEF0F3;
+  --chart-axis: #62748E;
+  --chart-bar: #7C8BA1;      /* neutral data mark, 3.5:1 on white */
+
+  /* Elevation (AllAI shadow scale) */
+  --shadow-xs: 0 1px 2px 0 rgba(15, 23, 43, .05);
+  --shadow-sm: 0 1px 3px 0 rgba(15, 23, 43, .08), 0 1px 2px -1px rgba(15, 23, 43, .06);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 43, .08), 0 2px 4px -2px rgba(15, 23, 43, .06);
+  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 43, .08), 0 4px 6px -4px rgba(15, 23, 43, .06);
+  --shadow-xl: 0 20px 25px -5px rgba(15, 23, 43, .10), 0 8px 10px -6px rgba(15, 23, 43, .06);
+  --shadow-2xl: 0 25px 50px -12px rgba(15, 23, 43, .22);
+  --shadow-brand: 0 10px 24px -8px rgba(225, 29, 72, .45);
+  --glow-brand: radial-gradient(closest-side, rgba(255, 35, 87, .20), transparent);
+  --glow-orange: radial-gradient(closest-side, rgba(254, 110, 0, .16), transparent);
+
+  /* Network chips that are black-on-light flip to white on dark */
+  --net-ink: #000000;
+  --net-ink-fg: #FFFFFF;
+
+  --logo: url("../brand/logo.svg");
+}
+
+/* ==========================================================================
+   Semantic roles — DARK (selected steps, not an inversion; AllAI dark tokens)
+   ========================================================================== */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg: #050506;
+  --bg-app: #08090B;
+  --surface: #0F1013;
+  --surface-2: #17181C;
+  --surface-3: #1F2126;
+  --surface-hover: #15161A;
+  --surface-inverse: #F8F8F8;
+  --overlay: rgba(0, 0, 0, .66);
+
+  --fg: #F8F8F8;
+  --fg-2: #BEC3CC;
+  --fg-3: #959AA3;            /* 6.6:1 on surface */
+  --fg-on-brand: #FFFFFF;
+  --fg-inverse: #0F172B;
+
+  --border: #24262B;          /* AllAI dark --border #222 lifted for app surfaces */
+  --border-strong: #33363D;
+  --divider: #1C1E22;
+
+  --brand: #F93C59;           /* AllAI dark --primary */
+  --brand-hover: #FA5470;
+  --brand-active: #E11D48;
+  --brand-ink: #FF7A8F;
+  --brand-soft: rgba(249, 60, 89, .12);
+  --brand-soft-2: rgba(249, 60, 89, .20);
+  --brand-ring: rgba(249, 60, 89, .40);
+  --grad-brand-soft: linear-gradient(135deg, rgba(255, 35, 87, .075) 0%, rgba(254, 110, 0, .04) 100%);
+  --grad-text: linear-gradient(90deg, #FF4D73 0%, #FF8A2B 100%);
+
+  --success: #3DD49A;
+  --success-soft: rgba(0, 187, 127, .12);
+  --warning: #FDBA4D;
+  --warning-soft: rgba(249, 156, 0, .12);
+  --danger: #FF6B7A;
+  --danger-soft: rgba(212, 9, 36, .14);
+  --info: #5AB4FF;
+  --info-soft: rgba(0, 132, 204, .14);
+
+  /* Data viz — dark steps (dataviz validator: ALL PASS dark) */
+  --series-1: #F93C59;
+  --series-2: #3987E5;
+  --series-3: #199E70;
+  --series-4: #C98500;
+  --series-5: #9085E9;
+  --seq-0: #1A1013;
+  --seq-1: #4A1422;
+  --seq-2: #7A1832;
+  --seq-3: #B61E45;
+  --seq-4: #F93C59;
+  --seq-5: #FF8FA1;
+  --chart-grid: #1E2025;
+  --chart-axis: #959AA3;
+  --chart-bar: #5B6474;      /* neutral data mark, 3.2:1 on dark surface */
+
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, .4);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, .5);
+  --shadow-md: 0 4px 10px -2px rgba(0, 0, 0, .55);
+  --shadow-lg: 0 12px 24px -6px rgba(0, 0, 0, .6);
+  --shadow-xl: 0 20px 36px -8px rgba(0, 0, 0, .65);
+  --shadow-2xl: 0 28px 60px -12px rgba(0, 0, 0, .75);
+  --shadow-brand: 0 10px 28px -8px rgba(249, 60, 89, .5);
+  --glow-brand: radial-gradient(closest-side, rgba(255, 35, 87, .13), transparent);
+  --glow-orange: radial-gradient(closest-side, rgba(254, 110, 0, .08), transparent);
+
+  --net-ink: #FFFFFF;
+  --net-ink-fg: #000000;
+
+  --logo: url("../brand/logo-white.svg");
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur: 0ms;
+    --dur-slow: 0ms;
+  }
+}

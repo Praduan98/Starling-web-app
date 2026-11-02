@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Starling Demo</title>
+<!-- A motion-film page (started with `mf new`): window.__seek(t) draws any frame; the scenes are in film.js.
+     Preview: mf preview films/starling/demo/index.html · check: mf qa films/starling/demo/index.html --brand=<brand.json> -->
+<style>
+  @font-face { font-family: "DM Sans"; src: url(fonts/DMSans-Variable.ttf); font-weight: 100 900; font-style: normal; }
+  #stage { font-family: "DM Sans", sans-serif; color: #F8F8F8; }
+  /* the film's own classes: film.css */
+</style>
+<link rel="stylesheet" href="film.css">
+</head>
+<body>
+<div id="stage"></div>
+<script>
+  window.FILM = {
+    "w": 1920,
+    "h": 1080,
+    "fps": 30,
+    "dur": 60.0,
+    "bpm": 120.0,
+    "palette": {
+      "glow": {
+        "base": [
+          "#020203",
+          "#050506"
+        ],
+        "colors": [
+          "#E11D48",
+          "#FE6E00",
+          "#FF2357",
+          "#5D0F20",
+          "#E11D48"
+        ],
+        "flash": "#EC6C88"
+      },
+      "kinetic": {
+        "text": "#F8F8F8"
+      },
+      "cursor": {
+        "fill": "#FFFFFF",
+        "outline": "#141414",
+        "ripple": "#FFFFFF",
+        "rippleOnLight": "#E11D48"
+      },
+      "brand": {
+        "primary": "#E11D48",
+        "secondary": "#FE6E00",
+        "accent": "#FF2357",
+        "dark": "#050506",
+        "light": "#FCFCFC",
+        "text": "#0F172B",
+        "textOnDark": "#F8F8F8"
+      }
+    },
+    "fonts": {
+      "kinetic": "DM Sans",
+      "display": "DM Sans",
+      "body": "DM Sans",
+      "mono": null
+    },
+    "fontLoad": [
+      "400 40px \"DM Sans\"",
+      "700 40px \"DM Sans\""
+    ],
+    "grain": {
+      "amount": 0.06
+    }
+  };
+</script>
+<script src="runtime/core/engine.js"></script>
+<script src="runtime/bg/glow.js"></script>
+<script src="runtime/fx/grain.js"></script>
+<script src="runtime/kit/icons.js"></script>
+<script src="runtime/kit/type.js"></script>
+<script src="runtime/kit/kinetic.js"></script>
+<script src="runtime/kit/stage.js"></script>
+<script src="lib/sl-icons.js"></script>
+<script src="film.js"></script>
+</body>
+</html>

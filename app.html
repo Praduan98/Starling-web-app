@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Starling — Social command center</title>
+  <meta name="description" content="Starling: plan, publish, engage and measure every social channel from one place.">
+  <script>try{var t=localStorage.getItem('starling:theme');t=t?JSON.parse(t):(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');var q=new URLSearchParams(location.search).get('theme');if(q){t=q;localStorage.setItem('starling:theme',JSON.stringify(q))}document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body class="app">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="shell" id="shell">
+    <!-- ===== Sidebar ===== -->
+    <aside class="sidebar" id="sidebar" aria-label="Primary">
+      <div class="sb-top">
+        <a class="sb-brand" href="#/home" aria-label="Starling home">
+          <img class="sb-logo-full logo-l" src="assets/brand/logo.svg" alt="Starling" height="26">
+          <img class="sb-logo-full logo-d" src="assets/brand/logo-white.svg" alt="Starling" height="26">
+          <img class="sb-logo-mark" src="assets/brand/logo-mark.svg" alt="" width="24" height="30">
+        </a>
+        <button class="icon-btn icon-btn-sm sb-collapse" id="sbCollapse" type="button" aria-label="Collapse sidebar" data-tip="Collapse sidebar" data-tip-pos="right"><i data-icon="panel-left" data-size="18"></i></button>
+      </div>
+
+      <button class="ws-switch" id="wsSwitch" type="button" aria-haspopup="menu" aria-expanded="false">
+        <span class="ws-avatar">NX</span>
+        <span class="ws-meta">
+          <span class="ws-name truncate">Nexora</span>
+          <span class="ws-plan">Growth plan · 8 channels</span>
+        </span>
+        <i data-icon="chevron-down" data-size="16" class="ws-chev"></i>
+      </button>
+
+      <button class="btn btn-gradient btn-block sb-create" type="button" data-compose>
+        <i data-icon="plus" data-size="18"></i><span class="sb-label">Create post</span>
+      </button>
+
+      <nav class="sb-nav" aria-label="Main">
+        <a class="sb-link" href="#/home" data-route="home" data-tip="Home" data-tip-pos="right"><i data-icon="house" data-size="20"></i><span class="sb-label">Home</span></a>
+        <a class="sb-link" href="#/planner" data-route="planner" data-tip="Planner" data-tip-pos="right"><i data-icon="calendar-days" data-size="20"></i><span class="sb-label">Planner</span></a>
+        <a class="sb-link" href="#/streams" data-route="streams" data-tip="Streams" data-tip-pos="right"><i data-icon="columns-3" data-size="20"></i><span class="sb-label">Streams</span></a>
+        <a class="sb-link" href="#/inbox" data-route="inbox" data-tip="Inbox" data-tip-pos="right"><i data-icon="inbox" data-size="20"></i><span class="sb-label">Inbox</span><span class="count sb-count" id="inboxCount" hidden></span></a>
+        <a class="sb-link" href="#/analytics" data-route="analytics" data-tip="Analytics" data-tip-pos="right"><i data-icon="chart-column" data-size="20"></i><span class="sb-label">Analytics</span></a>
+        <a class="sb-link" href="#/listening" data-route="listening" data-tip="Listening" data-tip-pos="right"><i data-icon="radio-tower" data-size="20"></i><span class="sb-label">Listening</span></a>
+        <div class="sb-sep" role="separator"></div>
+        <a class="sb-link" href="#/library" data-route="library" data-tip="Library" data-tip-pos="right"><i data-icon="images" data-size="20"></i><span class="sb-label">Library</span></a>
+        <a class="sb-link" href="#/approvals" data-route="approvals" data-tip="Approvals" data-tip-pos="right"><i data-icon="badge-check" data-size="20"></i><span class="sb-label">Approvals</span><span class="count count-muted sb-count" id="approvalCount" hidden></span></a>
+      </nav>
+
+      <div class="sb-ai card">
+        <div class="sb-ai-icon"><i data-icon="sparkles" data-size="16"></i></div>
+        <div class="sb-ai-body">
+          <div class="fw-700 text-sm">Starling AI</div>
+          <p class="text-xs text-muted">Turn one idea into a week of on-brand posts.</p>
+          <button class="btn btn-soft btn-sm" type="button" data-compose="ai">Try it</button>
+        </div>
+      </div>
+
+      <div class="sb-bottom">
+        <a class="sb-link" href="#/settings" data-route="settings" data-tip="Settings" data-tip-pos="right"><i data-icon="settings" data-size="20"></i><span class="sb-label">Settings</span></a>
+        <button class="sb-user" id="userMenu" type="button" aria-haspopup="menu" aria-expanded="false">
+          <span class="avatar avatar-sm presence"><img src="assets/media/a4.webp" alt=""></span>
+          <span class="sb-user-meta">
+            <span class="fw-600 text-sm truncate">Arjun Mehta</span>
+            <span class="text-xs text-muted truncate">Head of Social</span>
+          </span>
+          <i data-icon="ellipsis" data-size="16" class="sb-user-more"></i>
+        </button>
+      </div>
+    </aside>
+    <div class="sb-scrim" id="sbScrim" hidden></div>
+
+    <!-- ===== Main column ===== -->
+    <div class="main-col">
+      <header class="topbar" role="banner">
+        <button class="icon-btn topbar-menu" id="openSidebar" type="button" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false"><i data-icon="menu" data-size="20"></i></button>
+        <div class="topbar-title">
+          <h1 id="pageTitle" class="h4">Home</h1>
+          <p id="pageSub" class="text-sm text-muted"></p>
+        </div>
+        <button class="search-trigger" id="openSearch" type="button" aria-label="Search and commands">
+          <i data-icon="search" data-size="16"></i>
+          <span class="search-ph">Search posts, people, commands…</span>
+          <span class="kbd-group"><kbd>Ctrl</kbd><kbd>K</kbd></span>
+        </button>
+        <div class="topbar-actions">
+          <button class="icon-btn search-icon-only" type="button" aria-label="Search" data-open-search><i data-icon="search" data-size="20"></i></button>
+          <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch theme" data-tip="Theme" data-tip-pos="bottom"><span class="theme-ic"><i data-icon="moon" data-size="18"></i></span></button>
+          <button class="icon-btn" id="openHelp" type="button" aria-label="Help and resources" data-tip="Help" data-tip-pos="bottom"><i data-icon="circle-help" data-size="20"></i></button>
+          <button class="icon-btn" id="openNotifs" type="button" aria-label="Notifications, 4 unread" data-tip="Notifications" data-tip-pos="bottom"><i data-icon="bell" data-size="20"></i><span class="dot" id="notifDot"></span></button>
+          <button class="btn btn-gradient btn-sm topbar-create" type="button" data-compose><i data-icon="plus" data-size="16"></i>Create</button>
+        </div>
+      </header>
+
+      <main id="main" class="view" tabindex="-1"></main>
+    </div>
+  </div>
+
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/charts.js"></script>
+  <script src="assets/js/composer.js"></script>
+  <script src="assets/js/views/home.js"></script>
+  <script src="assets/js/views/planner.js"></script>
+  <script src="assets/js/views/streams.js"></script>
+  <script src="assets/js/views/inbox.js"></script>
+  <script src="assets/js/views/analytics.js"></script>
+  <script src="assets/js/views/listening.js"></script>
+  <script src="assets/js/views/library.js"></script>
+  <script src="assets/js/views/approvals.js"></script>
+  <script src="assets/js/views/settings.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

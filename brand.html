@@ -1,0 +1,743 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Starling Design System</title>
+  <meta name="description" content="Starling brand guidelines and design system: logo, color, typography, foundations, iconography, components, data visualization, voice and accessibility.">
+  <script>try{var t=localStorage.getItem('starling:theme');t=t?JSON.parse(t):(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/brand.css">
+</head>
+<body class="ds">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="ds-top">
+    <a class="ds-top-logo" href="#cover" aria-label="Starling design system, back to top">
+      <img data-theme-logo data-logo-light="assets/brand/logo.svg" data-logo-dark="assets/brand/logo-white.svg" src="assets/brand/logo.svg" alt="Starling" height="28">
+    </a>
+    <span class="ds-top-sep" aria-hidden="true"></span>
+    <span class="badge badge-brand">Design System v1.0</span>
+    <nav class="ds-top-links" aria-label="Product">
+      <a class="btn btn-secondary" href="app.html#/home"><i data-icon="layout-dashboard" data-size="16"></i>Open app</a>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch theme"><span class="theme-ic"></span></button>
+    </nav>
+  </header>
+
+  <div class="ds-shell">
+    <nav class="ds-toc" aria-label="Guidelines sections">
+      <p class="eyebrow ds-toc-title">Guidelines</p>
+      <ol>
+        <li><a href="#cover"><span class="num">00</span>Overview</a></li>
+        <li><a href="#logo"><span class="num">01</span>Logo</a></li>
+        <li><a href="#color"><span class="num">02</span>Color</a></li>
+        <li><a href="#typography"><span class="num">03</span>Typography</a></li>
+        <li><a href="#foundations"><span class="num">04</span>Foundations</a></li>
+        <li><a href="#icons"><span class="num">05</span>Iconography</a></li>
+        <li><a href="#components"><span class="num">06</span>Components</a></li>
+        <li><a href="#dataviz"><span class="num">07</span>Data visualization</a></li>
+        <li><a href="#voice"><span class="num">08</span>Voice &amp; tone</a></li>
+        <li><a href="#a11y"><span class="num">09</span>Accessibility</a></li>
+      </ol>
+      <div class="ds-toc-foot">
+        <strong>Built on AllAI Suite</strong>
+        Starling inherits the AllAI Suite design language: DM Sans, crimson brand, rose-to-orange signature gradient.
+      </div>
+    </nav>
+
+    <main class="ds-main" id="main" tabindex="-1">
+
+      <!-- ================= 00 COVER ================= -->
+      <section class="ds-cover" id="cover" data-section aria-labelledby="cover-title">
+        <div class="ds-cover-dots" aria-hidden="true"></div>
+        <div class="ds-cover-grid">
+          <div>
+            <span class="chip-announce"><b>v1.0</b>Brand guidelines · Nov 2026</span>
+            <h1 id="cover-title" class="display">Every channel, <span class="gradient-text">moving as one.</span></h1>
+            <p class="lead">A starling murmuration is thousands of birds moving as a single, fluid shape. That's the promise of Starling: every network, post and conversation your team manages, in one motion. This system keeps that promise consistent, from the smallest badge to the boldest campaign.</p>
+            <div class="ds-cover-actions">
+              <a class="btn btn-gradient btn-lg btn-pill" href="#logo">Explore the brand <i data-icon="arrow-right" data-size="18"></i></a>
+              <a class="btn btn-secondary btn-lg btn-pill" href="#components">Jump to components</a>
+            </div>
+          </div>
+          <div class="ds-cover-art" aria-hidden="true">
+            <span class="ds-orbit o2"></span>
+            <span class="ds-orbit"></span>
+            <img src="assets/brand/logo-mark.svg" alt="" width="148" height="188">
+          </div>
+        </div>
+        <dl class="ds-cover-meta">
+          <div><dt>Typeface</dt><dd>DM Sans</dd></div>
+          <div><dt>Brand color</dt><dd>Crimson #E11D48</dd></div>
+          <div><dt>Base radius</dt><dd>8px · cards 16px</dd></div>
+          <div><dt>Lineage</dt><dd>AllAI Suite</dd></div>
+        </dl>
+      </section>
+
+      <div class="ds-story">
+        <article class="card ds-story-card">
+          <div class="ds-story-ic"><i data-icon="workflow" data-size="20"></i></div>
+          <h3>The flight path</h3>
+          <p>The mark is a calligraphic S traced like a flock's flight path: hair-thin where it begins, gathering weight as it turns, and tapering to a beak-like point.</p>
+        </article>
+        <article class="card ds-story-card">
+          <div class="ds-story-ic"><i data-icon="sparkles" data-size="20"></i></div>
+          <h3>The star</h3>
+          <p>A four-point star floats ahead of the stroke. It's the "star" in Starling, the moment a post takes off, and a quiet nod to the AI at the heart of AllAI Suite.</p>
+        </article>
+        <article class="card ds-story-card">
+          <div class="ds-story-ic"><i data-icon="layers" data-size="20"></i></div>
+          <h3>The family</h3>
+          <p>Starling speaks the AllAI Suite design language, with the same type, crimson brand, rose-to-orange gradient, hairline borders and soft elevation, so it feels at home in the suite.</p>
+        </article>
+      </div>
+
+      <!-- ================= 01 LOGO ================= -->
+      <section class="ds-section" id="logo" data-section aria-labelledby="logo-title">
+        <div class="ds-section-head">
+          <span class="eyebrow">01 · Logo</span>
+          <h2 id="logo-title">A mark built from motion</h2>
+          <p>The lockup pairs the flight-path mark with a lowercase DM Sans Bold wordmark. The tittle on the "i" is replaced with the same four-point star, so the mark and the name share one detail.</p>
+        </div>
+
+        <div class="ds-sub">
+          <h3>Primary assets</h3>
+          <p>Use the full-color lockup on light surfaces and the white lockup on ink or photography. Every file is a true vector with outlined type and needs no font.</p>
+          <div class="ds-sub-body ds-grid-2">
+            <div class="ds-logo-tile is-paper">
+              <img class="lockup" src="assets/brand/logo.svg" alt="Starling primary lockup, full color">
+              <span class="cap">Primary · logo.svg</span>
+              <span class="dl"><a class="btn btn-secondary btn-sm" href="assets/brand/logo.svg" download><i data-icon="download" data-size="14"></i>SVG</a></span>
+            </div>
+            <div class="ds-logo-tile is-ink">
+              <img class="lockup" src="assets/brand/logo-white.svg" alt="Starling lockup, reversed for dark backgrounds">
+              <span class="cap">Reversed · logo-white.svg</span>
+              <span class="dl"><a class="btn btn-secondary btn-sm" href="assets/brand/logo-white.svg" download><i data-icon="download" data-size="14"></i>SVG</a></span>
+            </div>
+            <div class="ds-logo-tile is-paper">
+              <img class="lockup" src="assets/brand/logo-mono.svg" alt="Starling single-color lockup">
+              <span class="cap">Mono · logo-mono.svg</span>
+              <span class="dl"><a class="btn btn-secondary btn-sm" href="assets/brand/logo-mono.svg" download><i data-icon="download" data-size="14"></i>SVG</a></span>
+            </div>
+            <div class="ds-logo-tile is-soft">
+              <img class="mark" src="assets/brand/logo-mark.svg" alt="Starling mark">
+              <span class="cap">Mark · logo-mark.svg</span>
+              <span class="dl"><a class="btn btn-secondary btn-sm" href="assets/brand/logo-mark.svg" download><i data-icon="download" data-size="14"></i>SVG</a></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="ds-sub">
+          <h3>App icon</h3>
+          <p>The white mark on the signature gradient, with a soft top-left sheen. The mark sits slightly left of center to balance the weight of the star.</p>
+          <div class="ds-sub-body ds-icon-sizes">
+            <figure><img src="assets/brand/app-icon.svg" alt="Starling app icon at 128 pixels" width="128" height="128"><figcaption>128</figcaption></figure>
+            <figure><img src="assets/brand/app-icon.svg" alt="Starling app icon at 64 pixels" width="64" height="64"><figcaption>64</figcaption></figure>
+            <figure><img src="assets/brand/app-icon.svg" alt="Starling app icon at 32 pixels" width="32" height="32"><figcaption>32</figcaption></figure>
+            <figure><img src="assets/brand/app-icon.svg" alt="Starling app icon at 16 pixels" width="16" height="16"><figcaption>16</figcaption></figure>
+            <a class="btn btn-secondary btn-sm" href="assets/brand/app-icon.svg" download><i data-icon="download" data-size="14"></i>app-icon.svg</a>
+          </div>
+        </div>
+
+        <div class="ds-sub">
+          <h3>Clear space &amp; minimum size</h3>
+          <p>Keep a margin of <strong>x</strong> on every side, where x is the height of the star (about a quarter of the lockup's height). Never set the lockup below 96px wide or the mark below 16px.</p>
+          <div class="ds-sub-body ds-grid-2">
+            <div class="card card-pad ds-paper" style="display:grid;place-items:center;min-height:220px">
+              <div class="ds-clear">
+                <span class="x t" aria-hidden="true">x</span><span class="x b" aria-hidden="true">x</span><span class="x l" aria-hidden="true">x</span><span class="x r" aria-hidden="true">x</span>
+                <div class="ds-clear-inner"><img src="assets/brand/logo.svg" alt="Starling lockup with clear-space margin of x on all sides"></div>
+              </div>
+            </div>
+            <div class="card card-pad">
+              <ul class="ds-rules">
+                <li><i data-icon="maximize-2" data-size="18"></i><div><strong>Clear space = x</strong>The star's height. Nothing (text, edges or other logos) enters this zone.</div></li>
+                <li><i data-icon="minimize-2" data-size="18"></i><div><strong>Lockup ≥ 96px wide</strong>Below that, the wordmark's counters close up. Use the mark on its own instead.</div></li>
+                <li><i data-icon="smartphone" data-size="18"></i><div><strong>Mark ≥ 16px</strong>16px is the favicon floor. At 24px and above, use the app icon tile.</div></li>
+              </ul>
+              <div class="ds-minsize" style="margin-top:var(--sp-6)">
+                <figure><img src="assets/brand/logo.svg" alt="Starling lockup at minimum width, 96 pixels" style="width:96px;height:auto"><div class="ruler" style="width:96px" aria-hidden="true"></div><figcaption>96px</figcaption></figure>
+                <figure><img src="assets/brand/logo-mark.svg" alt="Starling mark at minimum size, 16 pixels" style="height:16px;width:auto"><div class="ruler" style="width:16px" aria-hidden="true"></div><figcaption>16px</figcaption></figure>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ds-sub">
+          <h3>Usage</h3>
+          <p>The mark carries the brand gradient. Keep it intact, give it room, and set it on calm backgrounds.</p>
+          <div class="ds-sub-body ds-grid-3">
+            <figure class="ds-dd is-do">
+              <div class="ds-dd-stage"><img src="assets/brand/logo.svg" alt="Correct: full-color lockup on a light surface"></div>
+              <figcaption class="ds-dd-label"><i data-icon="circle-check" data-size="16"></i><div><strong>Do: use on light, calm surfaces</strong>Full color on white, off-white or muted backgrounds.</div></figcaption>
+            </figure>
+            <figure class="ds-dd is-do">
+              <div class="ds-dd-stage is-ink"><img src="assets/brand/logo-white.svg" alt="Correct: reversed lockup on ink"></div>
+              <figcaption class="ds-dd-label"><i data-icon="circle-check" data-size="16"></i><div><strong>Do: reverse on ink</strong>The white lockup keeps the gradient mark on dark surfaces.</div></figcaption>
+            </figure>
+            <figure class="ds-dd is-do">
+              <div class="ds-dd-stage"><img class="mark" src="assets/brand/app-icon.svg" alt="Correct: app icon tile" style="height:80px;border-radius:18px"></div>
+              <figcaption class="ds-dd-label"><i data-icon="circle-check" data-size="16"></i><div><strong>Do: use the tile at small sizes</strong>On avatars, favicons and app stores, use the gradient tile.</div></figcaption>
+            </figure>
+            <figure class="ds-dd is-dont">
+              <div class="ds-dd-stage"><img class="dont-recolor" src="assets/brand/logo.svg" alt="Incorrect: lockup recolored to a different hue"></div>
+              <figcaption class="ds-dd-label"><i data-icon="circle-x" data-size="16"></i><div><strong>Don't recolor</strong>The rose-to-orange gradient is the brand. Never shift its hue.</div></figcaption>
+            </figure>
+            <figure class="ds-dd is-dont">
+              <div class="ds-dd-stage"><img class="dont-stretch" src="assets/brand/logo.svg" alt="Incorrect: lockup stretched horizontally"></div>
+              <figcaption class="ds-dd-label"><i data-icon="circle-x" data-size="16"></i><div><strong>Don't stretch or squash</strong>Always scale proportionally from a corner.</div></figcaption>
+            </figure>
+            <figure class="ds-dd is-dont">
+              <div class="ds-dd-stage"><img class="dont-effects" src="assets/brand/logo.svg" alt="Incorrect: lockup with drop shadow, glow and rotation"></div>
+              <figcaption class="ds-dd-label"><i data-icon="circle-x" data-size="16"></i><div><strong>Don't add effects</strong>No shadows, glows, outlines or rotation.</div></figcaption>
+            </figure>
+            <figure class="ds-dd is-dont">
+              <div class="ds-dd-stage is-photo"><img class="mark" src="assets/brand/logo-mark.svg" alt="Incorrect: gradient mark placed on a busy circuit-board photo"></div>
+              <figcaption class="ds-dd-label"><i data-icon="circle-x" data-size="16"></i><div><strong>Don't place on busy photos</strong>Use the white lockup over a calm, darkened area instead.</div></figcaption>
+            </figure>
+            <figure class="ds-dd is-dont">
+              <div class="ds-dd-stage"><div class="row" style="gap:3px"><img src="assets/brand/logo.svg" alt="Incorrect: lockup cramped against a sale badge" style="height:34px"><span class="badge badge-danger" style="height:26px">Free trial</span></div></div>
+              <figcaption class="ds-dd-label"><i data-icon="circle-x" data-size="16"></i><div><strong>Don't crowd it</strong>Respect clear space. Keep text and edges outside x.</div></figcaption>
+            </figure>
+            <figure class="ds-dd is-dont">
+              <div class="ds-dd-stage" style="background:var(--rose-600)"><img src="assets/brand/logo.svg" alt="Incorrect: full-color lockup on a crimson background with low contrast"></div>
+              <figcaption class="ds-dd-label"><i data-icon="circle-x" data-size="16"></i><div><strong>Don't use on brand color</strong>The gradient mark disappears on crimson. Use white instead.</div></figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 02 COLOR ================= -->
+      <section class="ds-section" id="color" data-section aria-labelledby="color-title">
+        <div class="ds-section-head">
+          <span class="eyebrow">02 · Color</span>
+          <h2 id="color-title">Crimson, with a warm horizon</h2>
+          <p>Crimson leads and the rose-to-orange gradient is the signature. Slate neutrals do most of the work. Every value is taken from AllAI Suite, and each step shows its live WCAG contrast.</p>
+        </div>
+
+        <div class="ds-sub">
+          <h3>Primitives</h3>
+          <p>Raw ramps. Components never use these directly; they use the semantic roles below.</p>
+          <div class="ds-sub-body" id="primitives"></div>
+        </div>
+
+        <div class="ds-sub">
+          <h3>Semantic roles: light &amp; dark</h3>
+          <p>Dark mode uses its own stepped values, taken from AllAI Suite's dark tokens, not an inversion. Contrast is measured against each mode's card surface.</p>
+          <div class="ds-sub-body ds-modes" id="modes"></div>
+        </div>
+
+        <div class="ds-sub">
+          <h3>Gradients</h3>
+          <p>The signature gradient is for brand moments: headlines, the logo and active indicators. Buttons with text use the AA-tuned CTA gradient, which starts deeper so white labels clear contrast where they sit.</p>
+          <div class="ds-sub-body ds-grid-2">
+            <div class="ds-gradient">
+              <div class="ds-gradient-bar sig"><span>#FF2357</span><span>#FE6E00</span></div>
+              <div class="ds-gradient-meta">
+                <h4>Signature <code class="tok">--grad-brand</code></h4>
+                <p>AllAI Suite's <em>from-rose-500 to-orange-500</em>. Use it for display type, the logo, tab indicators and progress fills. Never put small text on it.</p>
+                <code>linear-gradient(90deg, #FF2357 0%, #FE6E00 100%)</code>
+              </div>
+            </div>
+            <div class="ds-gradient">
+              <div class="ds-gradient-bar cta"><span>#E11D48</span><span>#F0560F</span></div>
+              <div class="ds-gradient-meta">
+                <h4>CTA <code class="tok">--grad-brand-cta</code></h4>
+                <p>Starts at brand crimson, where white text measures 4.70:1, and only warms toward the trailing edge. Reserved for one primary action per screen.</p>
+                <code>linear-gradient(100deg, #E11D48 0%, #EC2F45 45%, #F0560F 100%)</code>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 03 TYPOGRAPHY ================= -->
+      <section class="ds-section" id="typography" data-section aria-labelledby="type-title">
+        <div class="ds-section-head">
+          <span class="eyebrow">03 · Typography</span>
+          <h2 id="type-title">DM Sans, set with intent</h2>
+          <p>One family, four weights. Display sizes tighten their tracking and line height (AllAI's hero uses a 1.04 line height). Body text stays at 1.5 or more for comfortable reading.</p>
+        </div>
+
+        <div class="ds-sub">
+          <div class="ds-specimen">
+            <div class="ds-specimen-big">
+              <div class="aa" aria-hidden="true">Aa</div>
+              <div>
+                <div class="name">DM Sans</div>
+                <div class="meta">Geometric, low-contrast · optical size 9–40 · Google Fonts (OFL)</div>
+              </div>
+            </div>
+            <div class="card ds-glyphs">
+              <div class="set" aria-label="Uppercase alphabet">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+              <div class="set" aria-label="Lowercase alphabet">abcdefghijklmnopqrstuvwxyz</div>
+              <div class="set tabular" aria-label="Numerals and symbols">0123456789 @#&amp;%+→</div>
+              <div class="ds-weights">
+                <div><b style="font-weight:400">Aa</b><span>Regular 400</span><span class="use">Body</span></div>
+                <div><b style="font-weight:500">Aa</b><span>Medium 500</span><span class="use">Labels</span></div>
+                <div><b style="font-weight:600">Aa</b><span>Semibold 600</span><span class="use">UI</span></div>
+                <div><b style="font-weight:700">Aa</b><span>Bold 700</span><span class="use">Headings</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ds-sub">
+          <h3>Type scale</h3>
+          <p>A 13-step scale. The app UI runs on 14px; marketing body copy is 15–18px. Mobile inputs use 16px so iOS doesn't zoom in.</p>
+          <div class="ds-sub-body ds-scale" id="typescale"></div>
+        </div>
+      </section>
+
+      <!-- ================= 04 FOUNDATIONS ================= -->
+      <section class="ds-section" id="foundations" data-section aria-labelledby="found-title">
+        <div class="ds-section-head">
+          <span class="eyebrow">04 · Foundations</span>
+          <h2 id="found-title">Spacing, shape, depth &amp; motion</h2>
+          <p>A 4pt rhythm, an 8px base radius with 16px cards (AllAI's rounded-2xl), a soft five-step elevation scale, and short, purposeful motion.</p>
+        </div>
+
+        <div class="ds-sub">
+          <h3>Spacing · 4pt grid</h3>
+          <div class="ds-sub-body card card-pad ds-space" id="spacing"></div>
+        </div>
+
+        <div class="ds-sub">
+          <h3>Radius</h3>
+          <div class="ds-sub-body ds-radius" id="radius"></div>
+        </div>
+
+        <div class="ds-sub">
+          <h3>Elevation</h3>
+          <p>Cards rest at <code>shadow-sm</code> and lift to <code>shadow-xl</code> on hover. Menus use <code>xl</code> and modals use <code>2xl</code>.</p>
+          <div class="ds-sub-body ds-shadows" id="shadows"></div>
+        </div>
+
+        <div class="ds-sub">
+          <h3>Motion</h3>
+          <p>Micro-interactions take 120–280ms. Entrances ease out and exits ease in, running about 30% faster. Spring easing is only for small confirmations such as toggles, toasts and modals.</p>
+          <div class="ds-sub-body ds-motion">
+            <div class="ds-motion-head">
+              <button class="btn btn-primary" type="button" id="play-motion"><i data-icon="play" data-size="16"></i>Play curves</button>
+              <span class="text-sm text-muted">Slowed to 900ms so you can see each curve.</span>
+            </div>
+            <div id="motion-rows"></div>
+            <div class="ds-durations">
+              <div><b>120ms</b><span>--dur-fast · hover, press, tooltips</span></div>
+              <div><b>180ms</b><span>--dur · default state changes</span></div>
+              <div><b>280ms</b><span>--dur-slow · modals, drawers, toasts</span></div>
+            </div>
+            <div class="ds-callout ds-rm-note" id="rm-note"><i data-icon="info" data-size="18"></i><div><strong>Reduced motion is on.</strong> Duration tokens collapse to 0ms and animations jump to their end state.</div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 05 ICONS ================= -->
+      <section class="ds-section" id="icons" data-section aria-labelledby="icons-title">
+        <div class="ds-section-head">
+          <span class="eyebrow">05 · Iconography</span>
+          <h2 id="icons-title">One stroke, one voice</h2>
+          <p>UI icons come from Lucide, drawn at a 1.75 stroke on a 24px grid and rendered at 16, 18 or 20px. Network glyphs are the official Simple Icons marks. Emoji are never used as icons.</p>
+        </div>
+        <div class="ds-sub">
+          <h3>UI icons</h3>
+          <div class="ds-sub-body">
+            <div class="ds-icon-tools">
+              <label class="input-group">
+                <span class="sr-only">Filter icons</span>
+                <i data-icon="search" data-size="16" class="input-icon"></i>
+                <input class="input" type="search" id="icon-filter" placeholder="Filter icons by name…" autocomplete="off">
+              </label>
+              <span class="badge" id="icon-count" aria-live="polite"></span>
+              <span class="text-sm text-muted ds-icon-hint">Click an icon to copy its name</span>
+            </div>
+            <div class="ds-icon-grid" id="icon-grid"></div>
+            <div class="ds-icon-more-row"><button class="btn btn-secondary" type="button" id="icon-more" aria-controls="icon-grid" aria-expanded="false"></button></div>
+          </div>
+        </div>
+        <div class="ds-sub">
+          <h3>Network glyphs</h3>
+          <p>Always shown on the network's own brand color. Black-mark networks flip to white in dark mode.</p>
+          <div class="ds-sub-body ds-nets" id="nets"></div>
+        </div>
+      </section>
+
+      <!-- ================= 06 COMPONENTS ================= -->
+      <section class="ds-section" id="components" data-section aria-labelledby="comp-title">
+        <div class="ds-section-head">
+          <span class="eyebrow">06 · Components</span>
+          <h2 id="comp-title">The working parts</h2>
+          <p>Every example below is live and uses the same classes as the app. Hover, focus with the keyboard, and click them.</p>
+        </div>
+
+        <div class="ds-demos">
+          <!-- Buttons -->
+          <div class="ds-demo wide">
+            <div class="ds-demo-head"><h4>Buttons</h4><span class="badge">One primary action per screen</span></div>
+            <div class="ds-demo-stage">
+              <button class="btn btn-gradient btn-pill" type="button"><i data-icon="square-pen" data-size="16"></i>Create post</button>
+              <button class="btn btn-primary" type="button">Schedule</button>
+              <button class="btn btn-secondary" type="button">Save draft</button>
+              <button class="btn btn-ghost" type="button">Cancel</button>
+              <button class="btn btn-soft" type="button"><i data-icon="sparkles" data-size="16"></i>Rewrite with AI</button>
+              <button class="btn btn-danger" type="button">Delete</button>
+              <button class="btn btn-primary" type="button" disabled>Disabled</button>
+            </div>
+            <div class="ds-demo-stage" style="border-top:1px solid var(--divider)">
+              <button class="btn btn-primary btn-sm" type="button">Small</button>
+              <button class="btn btn-primary" type="button">Default</button>
+              <button class="btn btn-primary btn-lg" type="button">Large</button>
+              <button class="btn btn-gradient btn-xl btn-pill" type="button">Start free</button>
+              <button class="btn btn-secondary btn-icon" type="button" aria-label="Add" data-tip="Add"><i data-icon="plus" data-size="18"></i></button>
+              <button class="icon-btn" type="button" aria-label="Notifications" data-tip="Notifications"><i data-icon="bell" data-size="18"></i><span class="dot" aria-hidden="true"></span></button>
+              <button class="icon-btn" type="button" aria-pressed="true" aria-label="Pinned" data-tip="Pinned"><i data-icon="bookmark" data-size="18"></i></button>
+              <button class="btn btn-primary" type="button" id="demo-loading"><i data-icon="send" data-size="16"></i>Publish now</button>
+            </div>
+            <div class="ds-demo-cap"><b>.btn</b> + .btn-primary · .btn-gradient · .btn-secondary · .btn-ghost · .btn-soft · .btn-danger · sizes .btn-sm / .btn-lg / .btn-xl · .btn-pill · .btn-icon · .icon-btn · .is-loading (click "Publish now")</div>
+          </div>
+
+          <!-- Inputs -->
+          <div class="ds-demo">
+            <div class="ds-demo-head"><h4>Inputs</h4></div>
+            <div class="ds-demo-stage col">
+              <div class="field">
+                <label class="label" for="ds-campaign">Campaign name <span class="req" aria-hidden="true">*</span></label>
+                <input class="input" id="ds-campaign" value="Flow 3.0 Launch" required aria-describedby="ds-campaign-hint">
+                <span class="hint" id="ds-campaign-hint">Shown on reports and in the planner.</span>
+              </div>
+              <label class="input-group">
+                <span class="sr-only">Search posts</span>
+                <i data-icon="search" data-size="16" class="input-icon"></i>
+                <input class="input" type="search" placeholder="Search posts, tags, people…">
+              </label>
+              <div class="field">
+                <label class="label" for="ds-url">Link</label>
+                <input class="input" id="ds-url" type="url" value="nexora.io/flow-3" aria-invalid="true" aria-describedby="ds-url-err">
+                <span class="field-error" id="ds-url-err" role="alert"><i data-icon="triangle-alert" data-size="14"></i>Add https:// so the link preview can load.</span>
+              </div>
+            </div>
+            <div class="ds-demo-cap"><b>.field</b> .label .hint .field-error · <b>.input</b> [aria-invalid] · .input-group</div>
+          </div>
+
+          <div class="ds-demo">
+            <div class="ds-demo-head"><h4>Select, textarea &amp; choices</h4></div>
+            <div class="ds-demo-stage col">
+              <div class="field">
+                <label class="label" for="ds-tz">Time zone</label>
+                <select class="select" id="ds-tz"><option>India Standard Time (IST)</option><option>Gulf Standard Time (GST)</option><option>London (GMT)</option></select>
+              </div>
+              <div class="field">
+                <label class="label" for="ds-caption">Caption</label>
+                <textarea class="textarea" id="ds-caption" rows="3">Flow 3.0 is here: AI agents that plan, run and report on your workflows. #Flow3</textarea>
+              </div>
+              <div class="row-4 wrap">
+                <label class="check"><input type="checkbox" checked>First comment</label>
+                <label class="check"><input type="radio" name="ds-r" checked>Post now</label>
+                <label class="check"><input type="radio" name="ds-r">Schedule</label>
+                <label class="switch"><input type="checkbox" checked aria-label="Auto-schedule at best time"><span class="text-sm fw-500">Best time</span></label>
+              </div>
+            </div>
+            <div class="ds-demo-cap"><b>.select</b> · <b>.textarea</b> · <b>.check</b> (checkbox, radio) · <b>.switch</b></div>
+          </div>
+
+          <!-- Badges & status -->
+          <div class="ds-demo">
+            <div class="ds-demo-head"><h4>Badges &amp; status</h4></div>
+            <div class="ds-demo-stage col">
+              <div class="row wrap">
+                <span class="badge">Draft</span>
+                <span class="badge badge-brand">New</span>
+                <span class="badge badge-success badge-dot">Live</span>
+                <span class="badge badge-warning">Needs review</span>
+                <span class="badge badge-danger">Failed</span>
+                <span class="badge badge-info">Beta</span>
+                <span class="badge badge-outline">#Flow3</span>
+                <span class="count">12</span>
+                <span class="count count-muted">3</span>
+              </div>
+              <div class="row-4 wrap">
+                <span class="status st-scheduled"><i data-icon="calendar-clock" data-size="14"></i>Scheduled</span>
+                <span class="status st-published"><i data-icon="circle-check" data-size="14"></i>Published</span>
+                <span class="status st-draft"><i data-icon="pencil" data-size="14"></i>Draft</span>
+                <span class="status st-approval"><i data-icon="hourglass" data-size="14"></i>Needs approval</span>
+                <span class="status st-failed"><i data-icon="triangle-alert" data-size="14"></i>Failed</span>
+              </div>
+            </div>
+            <div class="ds-demo-cap"><b>.badge</b> -brand -success -warning -danger -info -outline -dot · <b>.count</b> · <b>.status</b> .st-* (icon and label, never color alone)</div>
+          </div>
+
+          <!-- Avatars -->
+          <div class="ds-demo">
+            <div class="ds-demo-head"><h4>Avatars</h4></div>
+            <div class="ds-demo-stage">
+              <span class="avatar avatar-xs"><img src="assets/media/a1.webp" alt="Meera Kapoor"></span>
+              <span class="avatar avatar-sm"><img src="assets/media/a2.webp" alt="Rohan Desai"></span>
+              <span class="avatar"><img src="assets/media/a3.webp" alt="Neha Sharma"></span>
+              <span class="avatar avatar-md presence"><img src="assets/media/a4.webp" alt="Arjun Mehta, online"></span>
+              <span class="avatar avatar-lg"><img src="assets/media/a5.webp" alt="Kavya Reddy"><i data-net="instagram" data-size="18"></i></span>
+              <span class="avatar avatar-xl"><img src="assets/media/a6.webp" alt="Aditya Kumar"><i data-net="linkedin" data-size="22"></i></span>
+              <span class="avatar avatar-md">JL</span>
+              <span class="avatar-stack" aria-label="5 teammates">
+                <span class="avatar avatar-sm"><img src="assets/media/a7.webp" alt=""></span>
+                <span class="avatar avatar-sm"><img src="assets/media/a8.webp" alt=""></span>
+                <span class="avatar avatar-sm"><img src="assets/media/a9.webp" alt=""></span>
+                <span class="avatar avatar-sm"><img src="assets/media/a10.webp" alt=""></span>
+                <span class="avatar avatar-sm">+1</span>
+              </span>
+            </div>
+            <div class="ds-demo-cap"><b>.avatar</b> -xs -sm -md -lg -xl · .presence · .net-badge overlay · <b>.avatar-stack</b></div>
+          </div>
+
+          <!-- Chips, tabs, segmented -->
+          <div class="ds-demo">
+            <div class="ds-demo-head"><h4>Chips, tabs &amp; segmented</h4></div>
+            <div class="ds-demo-stage col">
+              <div class="row wrap" id="demo-chips">
+                <button class="chip" type="button" aria-pressed="true">All <span class="count">24</span></button>
+                <button class="chip" type="button" aria-pressed="false"><i data-icon="message-circle" data-size="14"></i>Comments</button>
+                <button class="chip" type="button" aria-pressed="false"><i data-icon="mail" data-size="14"></i>DMs</button>
+                <button class="chip" type="button" aria-pressed="false"><i data-icon="at-sign" data-size="14"></i>Mentions</button>
+              </div>
+              <div>
+                <div class="tabs" role="tablist" aria-label="Report period" id="demo-tabs">
+                  <button class="tab" role="tab" type="button" aria-selected="true" data-panel="Overview: 1.2M impressions across 6 channels this month.">Overview</button>
+                  <button class="tab" role="tab" type="button" aria-selected="false" tabindex="-1" data-panel="Engagement: 4.8% average rate, up 0.6 pts from last month.">Engagement</button>
+                  <button class="tab" role="tab" type="button" aria-selected="false" tabindex="-1" data-panel="Audience: 38.2K new followers, led by LinkedIn.">Audience</button>
+                </div>
+                <p class="ds-tab-panel" role="tabpanel" id="demo-tabpanel">Overview: 1.2M impressions across 6 channels this month.</p>
+              </div>
+              <div class="segmented" role="group" aria-label="Calendar view" id="demo-seg">
+                <button type="button" aria-pressed="false"><i data-icon="list" data-size="14"></i>List</button>
+                <button type="button" aria-pressed="true"><i data-icon="calendar-days" data-size="14"></i>Week</button>
+                <button type="button" aria-pressed="false"><i data-icon="calendar" data-size="14"></i>Month</button>
+              </div>
+            </div>
+            <div class="ds-demo-cap"><b>.chip</b>[aria-pressed] · <b>.tabs</b> .tab[aria-selected] (arrow keys) · <b>.segmented</b></div>
+          </div>
+
+          <div class="ds-demo">
+            <div class="ds-demo-head"><h4>Overlays &amp; feedback</h4></div>
+            <div class="ds-demo-stage">
+              <button class="btn btn-secondary" type="button" data-demo="toast-success"><i data-icon="circle-check" data-size="16"></i>Success toast</button>
+              <button class="btn btn-secondary" type="button" data-demo="toast-error"><i data-icon="triangle-alert" data-size="16"></i>Error toast</button>
+              <button class="btn btn-secondary" type="button" data-demo="toast-info"><i data-icon="sparkles" data-size="16"></i>Info toast</button>
+              <button class="btn btn-secondary" type="button" data-demo="modal"><i data-icon="maximize-2" data-size="16"></i>Modal</button>
+              <button class="btn btn-secondary" type="button" data-demo="drawer"><i data-icon="panel-left" data-size="16"></i>Drawer</button>
+              <button class="btn btn-secondary" type="button" data-demo="menu" aria-haspopup="menu" aria-expanded="false"><i data-icon="ellipsis" data-size="16"></i>Menu</button>
+              <button class="btn btn-ghost" type="button" data-tip="Best time to post: <b>Tue 9:30 AM</b>">Hover for tooltip</button>
+            </div>
+            <div class="ds-demo-cap"><b>SL.toast()</b> · <b>SL.modal()</b> / SL.confirm() · <b>SL.drawer()</b> · <b>SL.menu()</b> · [data-tip]. Esc closes, focus is trapped and then restored.</div>
+          </div>
+
+          <!-- Cards -->
+          <div class="ds-demo">
+            <div class="ds-demo-head"><h4>Cards</h4></div>
+            <div class="ds-demo-stage">
+              <article class="card card-hover ds-post-card">
+                <img src="assets/media/t9.webp" alt="A presenter walking the team through a product demo in a meeting room" width="340" height="212">
+                <div class="body">
+                  <div class="row">
+                    <span class="avatar avatar-sm avatar-sq ds-nx" aria-hidden="true">NX</span>
+                    <div class="grow"><div class="fw-600 text-sm">Nexora</div><div class="text-xs text-muted">Tue 9:30 AM</div></div>
+                    <span class="status st-scheduled"><i data-icon="calendar-clock" data-size="14"></i>Scheduled</span>
+                  </div>
+                  <p class="text-sm text-2" style="margin-top:10px">Flow 3.0 is here. AI agents that plan, run and report on your workflows. #Flow3</p>
+                  <div class="stats"><span><i data-icon="heart" data-size="14"></i>2.4K</span><span><i data-icon="message-circle" data-size="14"></i>186</span><span><i data-icon="share-2" data-size="14"></i>92</span></div>
+                </div>
+              </article>
+              <div class="card ds-stat-card">
+                <div class="eyebrow">Engagement rate</div>
+                <div class="v">4.82%</div>
+                <span class="delta up"><i data-icon="trending-up" data-size="14"></i>+0.6 pts</span>
+                <div class="progress" style="margin-top:14px" role="progressbar" aria-label="Goal progress" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"><span style="width:72%"></span></div>
+                <div class="text-xs text-muted" style="margin-top:6px">72% of quarterly goal</div>
+              </div>
+            </div>
+            <div class="ds-demo-cap"><b>.card</b> .card-hover · .card-pad · .delta.up/.down · <b>.progress</b></div>
+          </div>
+
+          <!-- Feedback -->
+          <div class="ds-demo">
+            <div class="ds-demo-head"><h4>Skeleton &amp; empty state</h4></div>
+            <div class="ds-demo-stage col">
+              <div class="row-3" aria-hidden="true">
+                <span class="skeleton" style="width:40px;height:40px;border-radius:50%"></span>
+                <div class="grow stack-2"><div class="skeleton" style="height:12px;width:60%"></div><div class="skeleton" style="height:10px;width:85%"></div></div>
+              </div>
+              <div class="card empty">
+                <div class="empty-icon"><i data-icon="inbox" data-size="24"></i></div>
+                <h3>You're all caught up</h3>
+                <p>New comments, DMs and mentions from every channel will land here.</p>
+                <button class="btn btn-secondary btn-sm" type="button">Adjust filters</button>
+              </div>
+            </div>
+            <div class="ds-demo-cap"><b>.skeleton</b> (shimmer; static under reduced motion) · <b>.empty</b> .empty-icon</div>
+          </div>
+
+          <!-- Table -->
+          <div class="ds-demo wide">
+            <div class="ds-demo-head"><h4>Table</h4></div>
+            <div class="ds-demo-stage">
+              <div class="ds-table-wrap">
+                <table class="table">
+                  <thead><tr><th scope="col">Post</th><th scope="col">Channel</th><th scope="col">Status</th><th scope="col" class="num" aria-sort="descending"><button type="button">Engagement <i data-icon="chevron-down" data-size="14"></i></button></th></tr></thead>
+                  <tbody>
+                    <tr><td class="fw-600">Flow 3.0 launch keynote</td><td><span class="row"><i data-net="linkedin" data-size="20"></i>LinkedIn</span></td><td><span class="status st-published"><i data-icon="circle-check" data-size="14"></i>Published</span></td><td class="num">8.4%</td></tr>
+                    <tr><td class="fw-600">Build Week highlights</td><td><span class="row"><i data-net="instagram" data-size="20"></i>Instagram</span></td><td><span class="status st-published"><i data-icon="circle-check" data-size="14"></i>Published</span></td><td class="num">6.1%</td></tr>
+                    <tr><td class="fw-600">Pune office tour</td><td><span class="row"><i data-net="tiktok" data-size="20"></i>TikTok</span></td><td><span class="status st-scheduled"><i data-icon="calendar-clock" data-size="14"></i>Scheduled</span></td><td class="num">—</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="ds-demo-cap"><b>.table</b> · th[aria-sort] · td.num (tabular figures)</div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ================= 07 DATA VIZ ================= -->
+      <section class="ds-section" id="dataviz" data-section aria-labelledby="dv-title">
+        <div class="ds-section-head">
+          <span class="eyebrow">07 · Data visualization</span>
+          <h2 id="dv-title">Charts that tell the truth quickly</h2>
+          <p>Analytics is half of Starling. Charts use a fixed categorical order that starts with brand crimson, a single-hue rose ramp for magnitude, and a reserved status set.</p>
+        </div>
+
+        <div class="ds-sub">
+          <h3>Categorical palette</h3>
+          <p>Slots are always assigned in order and never cycled. A sixth series folds into "Other". Color follows the entity, so filtering never repaints the remaining series.</p>
+          <div class="ds-sub-body stack-4">
+            <div class="ds-slots" id="slots"></div>
+            <div class="ds-callout"><i data-icon="shield-check" data-size="18"></i><div><strong>Validated with the dataviz palette validator: ALL PASS in light and dark.</strong> Worst adjacent pair: amber ↔ aqua at CVD ΔE 9.1 (light) and 8.4 (dark). Aqua and amber sit below 3:1 on light surfaces, so charts that use them always add direct labels or a table view.</div></div>
+          </div>
+        </div>
+
+        <div class="ds-sub">
+          <h3>Sequential, rose (magnitude)</h3>
+          <p>Used for heatmaps such as "best time to post". Light steps recede toward the surface. Dark mode uses its own stepped ramp.</p>
+          <div class="ds-sub-body stack-3" id="seq"></div>
+        </div>
+
+        <div class="ds-sub">
+          <h3>Status (reserved)</h3>
+          <p>Never used for a series. Always shown with an icon and a label.</p>
+          <div class="ds-sub-body ds-status-row">
+            <span class="ds-status-pill badge-success"><i data-icon="circle-check" data-size="16"></i>Good · published</span>
+            <span class="ds-status-pill badge-warning"><i data-icon="hourglass" data-size="16"></i>Warning · needs approval</span>
+            <span class="ds-status-pill badge-danger"><i data-icon="triangle-alert" data-size="16"></i>Critical · failed to publish</span>
+            <span class="ds-status-pill badge-info"><i data-icon="info" data-size="16"></i>Info · scheduled</span>
+          </div>
+        </div>
+
+        <div class="ds-sub">
+          <h3>Example: rules applied</h3>
+          <div class="ds-sub-body ds-grid-2 ds-chart-grid">
+            <div class="ds-chart">
+              <div class="ds-chart-head">
+                <div>
+                  <h4>Weekly engagements</h4>
+                  <p class="text-sm text-muted">Last 12 weeks · one axis, one unit</p>
+                  <div class="ds-legend" aria-hidden="true"><span><i style="background:var(--series-1)"></i>Instagram</span><span><i style="background:var(--series-2)"></i>LinkedIn</span></div>
+                </div>
+                <button class="btn btn-secondary btn-sm" type="button" id="chart-table-toggle" aria-expanded="false" aria-controls="chart-table"><i data-icon="list" data-size="14"></i>Table view</button>
+              </div>
+              <div class="ds-chart-plot" id="chart"></div>
+              <div class="ds-chart-table ds-table-wrap hidden" id="chart-table"></div>
+            </div>
+            <div class="card card-pad">
+              <ul class="ds-rules">
+                <li><i data-icon="chart-line" data-size="18"></i><div><strong>One axis, always.</strong> Two measures with different scales get two charts, never a dual axis.</div></li>
+                <li><i data-icon="minimize-2" data-size="18"></i><div><strong>Thin marks.</strong> 2px lines, 4px rounded bar ends, at least 8px markers, and a 2px surface gap between fills.</div></li>
+                <li><i data-icon="tag" data-size="18"></i><div><strong>Legend for two or more series.</strong> Up to four series are also labeled directly at the line end.</div></li>
+                <li><i data-icon="type" data-size="18"></i><div><strong>Text uses ink, not series color.</strong> Values and labels stay in primary or secondary text; a colored dot carries identity.</div></li>
+                <li><i data-icon="activity" data-size="18"></i><div><strong>Hover by default.</strong> A crosshair and tooltip on lines, a per-mark tooltip on bars, and a table view for screen readers.</div></li>
+                <li><i data-icon="sliders-horizontal" data-size="18"></i><div><strong>Recessive grid.</strong> Gridlines use <code>--chart-grid</code>, so data always leads.</div></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 08 VOICE ================= -->
+      <section class="ds-section" id="voice" data-section aria-labelledby="voice-title">
+        <div class="ds-section-head">
+          <span class="eyebrow">08 · Voice &amp; tone</span>
+          <h2 id="voice-title">Calm, clear, quietly confident</h2>
+          <p>Social teams work fast and in public. Starling sounds like a steady teammate: it says what happened, what it means, and what to do next.</p>
+        </div>
+        <div class="ds-principles">
+          <article class="card ds-principle"><span class="n">01</span><h4>Clear over clever</h4><p>Plain verbs, specific numbers, no jargon. "Scheduled for Tue 9:30 AM", not "Queued successfully".</p></article>
+          <article class="card ds-principle"><span class="n">02</span><h4>Calm under pressure</h4><p>When something breaks, stay level, say why, and give the fix in the same breath.</p></article>
+          <article class="card ds-principle"><span class="n">03</span><h4>Human, never robotic</h4><p>Write like a colleague. Use contractions, use "you", and never blame the user.</p></article>
+          <article class="card ds-principle"><span class="n">04</span><h4>Celebrate the team</h4><p>Wins are shared. Credit the people and the content, not the tool.</p></article>
+        </div>
+        <div class="ds-sub" style="margin-top:var(--sp-8)">
+          <div class="ds-copy" role="table" aria-label="Microcopy do and don't examples">
+            <div class="ctx head" role="columnheader">Moment</div>
+            <div class="head do" role="columnheader"><i data-icon="circle-check" data-size="14"></i>Do</div>
+            <div class="head dont" role="columnheader"><i data-icon="circle-x" data-size="14"></i>Don't</div>
+
+            <div class="ctx" role="rowheader">Empty inbox</div>
+            <div class="do-c" role="cell">You're all caught up. New messages from every channel will land here.</div>
+            <div class="dont-c" role="cell">No data found.</div>
+
+            <div class="ctx" role="rowheader">Publish error</div>
+            <div class="do-c" role="cell">Instagram didn't accept this video because it's longer than 90 seconds. Trim it or post it as a Reel.</div>
+            <div class="dont-c" role="cell">Error 400: Upload failed.</div>
+
+            <div class="ctx" role="rowheader">Success</div>
+            <div class="do-c" role="cell">Scheduled for Tue, 9:30 AM on 3 channels.</div>
+            <div class="dont-c" role="cell">Success!!! Your post was queued successfully.</div>
+
+            <div class="ctx" role="rowheader">Primary button</div>
+            <div class="do-c" role="cell">Schedule post</div>
+            <div class="dont-c" role="cell">Submit</div>
+
+            <div class="ctx" role="rowheader">Destructive confirm</div>
+            <div class="do-c" role="cell">Delete this scheduled post? It won't be published to LinkedIn or X.</div>
+            <div class="dont-c" role="cell">Are you sure?</div>
+
+            <div class="ctx" role="rowheader">AI suggestion</div>
+            <div class="do-c" role="cell">Here's a shorter version for X, at 212 characters. Keep it or edit it.</div>
+            <div class="dont-c" role="cell">AI has generated optimized content for maximum engagement.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 09 ACCESSIBILITY ================= -->
+      <section class="ds-section" id="a11y" data-section aria-labelledby="a11y-title">
+        <div class="ds-section-head">
+          <span class="eyebrow">09 · Accessibility</span>
+          <h2 id="a11y-title">Built for everyone on the team</h2>
+          <p>Every component ships with the critical rules from our UI/UX review checklist already in place. These are requirements, not suggestions.</p>
+        </div>
+        <ul class="ds-a11y">
+          <li><i data-icon="circle-check" data-size="18"></i><div><strong>Contrast 4.5:1 for text</strong><span>Body text, labels and icons meet AA in both themes. Brand crimson on white measures 4.70:1.</span><span class="tag">color-contrast · color-accessible-pairs</span></div></li>
+          <li><i data-icon="circle-check" data-size="18"></i><div><strong>Visible focus everywhere</strong><span>A 2px crimson outline or 3px ring on every interactive element, and never removed.</span><span class="tag">focus-states · keyboard-nav</span></div></li>
+          <li><i data-icon="circle-check" data-size="18"></i><div><strong>44px touch targets</strong><span>Toolbar icon buttons are 40px with 8px spacing, and nav rows are 44px. Mobile inputs are 16px or larger.</span><span class="tag">touch-target-size · touch-spacing</span></div></li>
+          <li><i data-icon="circle-check" data-size="18"></i><div><strong>Reduced motion respected</strong><span>Duration tokens drop to 0ms and shimmer and spring effects stop.</span><span class="tag">reduced-motion</span></div></li>
+          <li><i data-icon="circle-check" data-size="18"></i><div><strong>Labels, not placeholders</strong><span>Every input has a visible label. Errors appear below the field with role="alert" and state the fix.</span><span class="tag">input-labels · error-clarity</span></div></li>
+          <li><i data-icon="circle-check" data-size="18"></i><div><strong>Color is never alone</strong><span>Status always pairs an icon with a label. Charts add legends, direct labels and a table view.</span><span class="tag">color-not-only · data-table</span></div></li>
+          <li><i data-icon="circle-check" data-size="18"></i><div><strong>Icon buttons are named</strong><span>Every icon-only control has an aria-label and a tooltip.</span><span class="tag">aria-labels</span></div></li>
+          <li><i data-icon="circle-check" data-size="18"></i><div><strong>Dialogs trap and restore focus</strong><span>Esc closes, focus stays inside while open and returns to the trigger afterwards.</span><span class="tag">escape-routes · focus-management</span></div></li>
+        </ul>
+
+        <footer class="ds-foot">
+          <div class="row-3"><img data-theme-logo data-logo-light="assets/brand/logo.svg" data-logo-dark="assets/brand/logo-white.svg" src="assets/brand/logo.svg" alt="Starling"><span>Design System v1.0 · Derived from AllAI Suite</span></div>
+          <div class="row-3"><a class="btn btn-ghost btn-sm" href="app.html#/home">Open app</a><a class="btn btn-ghost btn-sm" href="#cover">Back to top <i data-icon="chevron-up" data-size="14"></i></a></div>
+        </footer>
+      </section>
+    </main>
+  </div>
+
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/brand.js"></script>
+</body>
+</html>
